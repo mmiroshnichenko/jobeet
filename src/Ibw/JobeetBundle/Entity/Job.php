@@ -531,4 +531,14 @@ class Job
             $this->expires_at = new \DateTime(date('Y-m-d H:i:s', $now + 86400 * 30));
         }
     }
+
+    public static function getTypes()
+    {
+        return array('full-time' => 'Full time', 'part-time' => 'Part time', 'freelance' => 'Freelance');
+    }
+
+    public static function getTypeValues()
+    {
+        return array_keys(self::getTypes());
+    }
 }
