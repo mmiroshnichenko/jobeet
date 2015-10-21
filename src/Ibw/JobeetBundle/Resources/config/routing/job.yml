@@ -1,5 +1,5 @@
 ibw_job:
-    path:     /
+    path:     /list
     defaults: { _controller: "IbwJobeetBundle:Job:index" }
 
 ibw_job_show:
