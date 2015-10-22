@@ -203,19 +203,13 @@ class Category
     {
         return $this->slug;
     }
+
     /**
      * @ORM\PrePersist
+     * @ORM\PreUpdate
      */
     public function setSlugValue()
     {
         $this->slug = Jobeet::slugify($this->getName());
-    }
-
-    /**
-     * @ORM\PreUpdate
-     */
-    public function setSlugValuePreUpdate()
-    {
-        $this->setSlugValue();
     }
 }

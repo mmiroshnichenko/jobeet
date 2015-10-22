@@ -25,4 +25,4 @@ Ibw\JobeetBundle\Entity\Category:
             mappedBy: categories
     lifecycleCallbacks:
         prePersist: [setSlugValue]
-        preUpdate: [setSlugValuePreUpdate]
+        preUpdate: [setSlugValue]
