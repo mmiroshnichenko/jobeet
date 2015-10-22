@@ -1,5 +1,4 @@
 <?php
-
 namespace Ibw\JobeetBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
