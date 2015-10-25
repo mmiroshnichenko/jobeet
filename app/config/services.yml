@@ -4,6 +4,20 @@ parameters:
 #    parameter_name: value
 
 services:
-#    service_name:
-#        class: AppBundle\Directory\ClassName
-#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+    ibw.jobeet.admin.category:
+        class: Ibw\JobeetBundle\Admin\CategoryAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: jobeet, label: Categories }
+        arguments:
+            - ~
+            - Ibw\JobeetBundle\Entity\Category
+            - 'IbwJobeetBundle:CategoryAdmin'
+
+    ibw.jobeet.admin.job:
+        class: Ibw\JobeetBundle\Admin\JobAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: jobeet, label: Jobs }
+        arguments:
+            - ~
+            - Ibw\JobeetBundle\Entity\Job
+            - 'IbwJobeetBundle:JobAdmin'
