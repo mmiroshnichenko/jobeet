@@ -9,3 +9,9 @@ ibw_jobeet_homepage:
 ibw_jobeet_category:
     pattern:  /category/{slug}/{page}
     defaults: { _controller: IbwJobeetBundle:Category:show, page: 1 }
+
+login:
+    pattern:   /login
+    defaults:  { _controller: IbwJobeetBundle:Default:login }
+login_check:
+    pattern:   /login_check
